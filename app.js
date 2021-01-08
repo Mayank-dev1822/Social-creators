@@ -82,9 +82,13 @@ passport.deserializeUser(function (id, done) {
 });
 // OAUTH GOOGLE
 passport.use(new GoogleStrategy({
-    clientID: process.env.CLIENT_ID,
-    clientSecret: process.env.CLIENT_SECRET,
-    callbackURL: "http://localhost:3000/auth/google/devbase"
+    // clientID: process.env.CLIENT_ID,
+    // clientSecret: process.env.CLIENT_SECRET,
+    // callbackURL: "http://localhost:3000/auth/google/devbase",
+
+    clientID: '213220483786 - diok775crcc8pjc0fsh5f7iiogni19n5.apps.googleusercontent.com',
+    clientSecret: 'gAfMb4TDa - Hqd - 7rr3T2d- YQ',
+    callbackURL: "https://tranquil-island-39460.herokuapp.com/auth/google/devbase",
     // userProfileURL: "https://www.googleapis.com/oauth2/v3/userinfo"
 },
     function (accessToken, refreshToken, profile, cb) {
