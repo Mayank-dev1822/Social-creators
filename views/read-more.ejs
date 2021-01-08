@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+    crossorigin="anonymous"></script>
+  <title>Document</title>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body>
+  <!-- video background -->
+  <div class="v-header container">
+    <div class="fullscreen-video-wrapper">
+      <video src="video-bg/bg1.mov" autoplay="true" loop="true"></video>
+      <embed src="music/audio.mp3" loop="true" autostart="true" />
+    </div>
+    <div class="header-overlay"></div>
+
+    <div class="header-content">
+      <h1 class="text-center">Meet The Founders</h1>
+      <!-- card  one-->
+      <div class="container">
+        <div class="row">
+
+          <div class="card col" style="max-width: 840px" data-aos="fade-left">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="img/fd.jpg" alt="..." height="300px" width="200px" />
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">Khushi Saini</h5>
+                  <h6 class="card-title">Front-end Developer</h6>
+                  <p class="card-text">
+                    This is a wider card with supporting text below as a natural
+                    lead-in to additional content. This content is a little bit
+                    longer. This is a wider card with supporting text below as a
+                    natural lead-in to additional content. This content is a
+                    little bit longer.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm">
+            One of three columns
+          </div>
+          <!-- card  two-->
+          <div class="card  col" style="float: right !important; max-width: 640px" data-aos="fade-right">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="img/fg.jpg" alt="..." height="300px" width="200px" />
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">Mayank Saini</h5>
+                  <h6 class="card-title">Back-end Developer</h6>
+                  <p class="card-text">
+                    This is a wider card with supporting text below as a natural
+                    lead-in to additional content. This content is a little bit
+                    longer. This is a wider card with supporting text below as a
+                    natural lead-in to additional content. This content is a
+                    little bit longer.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- <div class="container">
+  <div class="row">
+    <div class="col-sm">
+      
+    </div>
+    <div class="col-sm">
+      One of three columns
+    </div>
+    <div class="col-sm">
+     
+    </div>
+  </div>
+</div> -->
+
+
+
+
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0px;
+      font-family: cursive;
+      font-size: 1rem;
+      overflow-x: hidden;
+    }
+
+    .v-header {
+      height: 100vh;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      margin: auto;
+    }
+
+    .container {
+      max-width: 960px;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      margin: auto;
+      text-align: center;
+    }
+
+    .fullscreen-video-wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .fullscreen-video-wrapper video {
+      min-height: 100%;
+      min-width: 100%;
+    }
+
+    .header-overlay {
+      height: 100vh;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      z-index: 1;
+    }
+
+    .header-content {
+      z-index: 2;
+    }
+
+    .text-center {
+      font-size: 50px;
+      margin-bottom: 0;
+      text-align: center;
+    }
+  </style>
+
+  <script>
+    var overlay = document.getElementById("overlay");
+    var video = document.getElementById("v");
+    video.addEventListener(
+      "progress",
+      function () {
+        var show = video.currentTime >= 5 && video.currentTime < 10;
+        overlay.style.visibility = show ? "visible" : "visible";
+      },
+      false
+    );
+  </script>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<style>
+    .navbar {
+        background-color: #efecec;
+        /* color: rgb(110, 109, 109); */
+    }
+
+    .searchForm {
+        width: 50% !important;
+        height: 32px;
+        text-align: center;
+        border: none;
+        border-radius: 50px;
+    }
+
+    .searchIconForm {
+        width: 100%;
+        text-align: center;
+    }
+
+    .accountImg {
+        width: 20%;
+    }
+
+    /* MAIN FEED CSS */
+    .contentDiv {}
+
+    .feedBody {
+        width: 80%;
+        background-color: #f0f0f0;
+    }
+
+    .userName {
+        background-color: #e0e0e0;
+    }
+
+    .userProvileBorder {
+        padding-top: 10px;
+    }
+
+    .userProile {
+        width: 82%;
+        height: 52px;
+        border-radius: 50%;
+    }
+
+    .user {
+        text-align: left;
+    }
+
+    .userPad {
+        margin-top: 20px;
+    }
+
+    .postDescription {
+        background-color: #f0f0f0;
+    }
+
+    .description {
+        text-align: left;
+        padding: 20px 40px 20px 40px;
+    }
+
+    .userPost {
+        width: 100%;
+    }
+
+    .postReact {
+        padding: 10px 0px 10px 0px;
+        width: 18%;
+    }
+
+    @media (max-width:600px) {
+        .userProile {
+            width: 35%;
+            height: 52px;
+            border-radius: 50%;
+        }
+
+        .userProvileBorder {
+            text-align: left;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        .userPad {
+            margin-top: 22px;
+            float: right !important;
+            font-weight: 600;
+            font-size: 20px;
+        }
+
+        .user {
+            text-align: right;
+        }
+
+        .description {
+            text-align: left;
+            padding: 50px 40px 50px 40px !important;
+        }
+
+        .postReact {
+            padding: 10px 0px 10px 0px;
+            width: 30%;
+        }
+
+        .feedBody {
+            width: 100%;
+            background-color: #f0f0f0;
+        }
+    }
+
+    .likeHeart {
+        background-color: #e0e0e0;
+    }
+
+    .contentDiv {
+
+        padding-bottom: 70px;
+    }
+</style>
+<style>
+    .hideMob {
+        background: #eee;
+    }
+
+    #light {
+        display: none;
+    }
+       h4 {
+      font-weight: bold;
+      color: #fff;
+    }
+
+    .close {
+      color: #fff;
+      transform: scale(1.2)
+    }
+
+    .modal-content {
+      font-weight: bold;
+      /* background: linear-gradient(to bottom right,#F87E7B,#B05574); */
+    }
+    .newDiv {
+    padding-right: 0px ;
+    padding-left: 50px ;
+    padding-bottom: 30px;
+    width: 100% !important;
+}
+.img-fluid {
+    max-width: 100% !important;
+    height: auto;
+}
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: 0px;
+    margin-left: -7px;
+}
+    .form-control {
+      margin: 1em 0;
+    }
+
+    .form-control:hover,
+    .form-control:focus {
+      box-shadow: none;
+      border-color: #fff;
+    }
+
+    .Fname,
+    .textarea {
+      border: none;
+      border-radius: 0;
+      box-shadow: none;
+      border-bottom: 2px solid #eee;
+      padding-left: 0;
+      font-weight: normal;
+      background: transparent;
+    }
+
+    .form-control::-webkit-input-placeholder {
+      color: #eee;
+    }
+
+    .form-control:focus::-webkit-input-placeholder {
+      font-weight: bold;
+      color: #fff;
+    }
+
+    .submit {
+      padding: 6px 20px;
+      border-radius: 20px;
+      background: none;
+      border: 2px solid #FAB87F;
+      color: #FAB87F;
+      font-weight: bold;
+      transition: all .5s;
+      margin-top: 1em;
+    }
+
+    .submit:hover {
+      background: #FAB87F;
+      color: #fff;
+    }
+
+    .feedback-trigger {
+      color: white;
+    }
+
+    .feedback-trigger:hover {
+      text-decoration: none;
+      color: bisque;
+    }
+
+    .modal-body {
+      background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+      background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
+    }
+
+    @keyframes gradient {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+</style>
+
+<body id="darkMode">
+
+
+    <script>
+        function dark() {
+            document.getElementById("darkMode").style.backgroundColor = "rgb(48, 47, 47)";
+            document.getElementById("darkMode").style.color = "#eee";
+            document.getElementById("darkSide").style.backgroundColor = "rgb(48, 47, 47)";
+            document.getElementById("darkNav").style.backgroundColor = "rgb(89, 89, 89)";
+            document.getElementById("cardDark").style.backgroundColor = "rgb(48, 47, 47)";
+            document.getElementById("turn").style.color = "#eee";
+            document.getElementById("dark").style.display = "none";
+            document.getElementById("light").style.display = "block";
+        }
+        function light() {
+            document.getElementById("darkMode").style.backgroundColor = "rgb(255, 255, 255)";
+            document.getElementById("darkMode").style.color = "black";
+            document.getElementById("darkSide").style.backgroundColor = "#EFECEC";
+            document.getElementById("darkNav").style.backgroundColor = "#EFECEC";
+            document.getElementById("cardDark").style.backgroundColor = "rgb(255, 255, 255)";
+            document.getElementById("turn").style.color = "rgb(255, 255, 255)";
+            document.getElementById("dark").style.display = "block";
+            document.getElementById("light").style.display = "none";
+        }
+    </script>
+    <!-- navbar -->
+    <!-- <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="/docs/4.0/assets/brand/bootstrap-solid.svg" width="30" height="30"
+                class="d-inline-block align-top" alt="">
+            Bootstrap
+        </a> -->
+    <!-- logout modal -->
+
+    <!-- <ul class="nav justify-content-end">
+            <li class="nav-item">
+                <button class="btn btn-primary button" data-toggle="modal" data-target=".bs-example-modal-sm"><img
+                        src="img/user.png" width="30" height="30" class="d-inline-block align-top" alt=""></button>
+
+            </li>
+            <div class="modal bs-example-modal-sm" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog modal-sm">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4>Logout <i class="fa fa-lock"></i></h4>
+                        </div>
+                        <div class="modal-body"><i class="fa fa-question-circle"></i> Are you sure you want to log-off?
+                        </div>
+                        <div class="modal-footer"><a href="/logout" class="btn btn-primary btn-block">Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ul>
+    </nav> -->
+
+
+
+
+
+
+    <nav style="transition: 0.5s;" id="darkNav" class="navbar navbar-expand-lg ">
+        <a style="margin-right: 6rem;" class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div style="width: 100%;" class="d-flex justify-content-center">
+            <form class="searchIconForm" action="">
+                <input class="searchForm" type="search" placeholder="Search">
+                <i class="fas fa-search" aria-hidden="true"></i>
+            </form>
+        </div>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+            <ul class="navbar-nav" style="text-align: left !important;">
+                <li class="nav-item" style="text-align: left !important;">
+                    <button style="transition: 0.5s;" id="dark" class="btn btn-dark" onclick="dark()">Dark</button>
+                    <button style="transition: 0.5s;" id="light" class="btn btn-light" onclick="light()">Light</button>
+                </li>
+                <li class="nav-item" style="text-align: left !important;">
+                    <a data-toggle="modal" data-target=".bs-example-modal-sm" style="text-align: end;" class="nav-link"
+                        href="#" tabindex="-1" aria-disabled="true"><img class="accountImg" src="img/user-regular.svg"
+                            alt=""></a>
+                </li>
+                <!-- <li class="nav-item" style="text-align: left !important;">
+                <a style="text-align: end;" class=" " data-toggle="modal" data-target=".bs-example-modal-sm"><img class="accountImg" src="img/user-regular.svg" alt=""></a>
+            </li> -->
+                <div class="modal bs-example-modal-sm" tabindex="-1" role="dialog" aria-hidden="true">
+                    <div class="modal-dialog modal-sm">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 style="color: black;">Logout <i class="fa fa-lock"></i></h4>
+                            </div>
+                            <div class="modal-body"><i class="fa fa-question-circle"></i> Are you sure you want to
+                                log-off?
+                            </div>
+                            <div class="modal-footer"><a href="/logout" class="btn btn-primary btn-block">Logout</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ul>
+        </div>
+    </nav>
+    <!--parent grid-->
+
+    <div id="expand" class="menu"><img src="main-page-img/square.svg" height="30" width="30">
+        <!-- <button class="btn btn-dark" onclick="clickFunction()">this button</button> -->
+
+        <ul id="expand turn">
+            <a href="/submit">
+                <li class="text-start one" id="uploads">Upload</li>
+            </a>
+            <a href="">
+                <li class="text-start two" id="friends">Friends</li>
+            </a>
+            <a href="">
+                <li class="text-start three" id="groups">Groups</li>
+            </a>
+            <a href="">
+                <li class="text-start four" id="settings">Settings</li>
+            </a>
+                 
+            <a href="">
+                <li class="text-start six" id="security">Security</li>
+            </a>
+        </ul>
+    </div>
+
+
+    <script>
+        function clickFunction() {
+            document.getElementById("expand").style.height = "200px";
+        }
+    </script>
+
+
+
+
+    <div class="row  marginDiv">
+        <div style="transition: 0.5s;" id="darkSide" class="col col-md-3 hideMob">
+
+            <h1></h1>
+            <div id="turn" class="item">
+                <a href="/submit">
+                    <li class="text-start one" id="uploads">Upload</li>
+                </a>
+                <a href="/profile">
+                    <li class="text-start four" id="settings">feeds</li>
+                </a>
+                <a href="">
+                    <li class="text-start two" id="friends">Friends</li>
+                </a>
+                <a href="">
+                    <li class="text-start three" id="groups">Groups</li>
+                </a>
+
+
+
+               <ul>
+                <li>
+                    <!--Trigger-->
+                    <a class="feedback-trigger" href="#" data-target="#login" data-toggle="modal">Feedback</a>
+                    <div id="login" class="modal fade" role="dialog">
+                        <div class="modal-dialog">
+                
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <button data-dismiss="modal" class="close">&times;</button>
+                                    <h4>Feedback</h4>
+                                    <form action="/feedback" method="POST">
+                                        <input type="text" name="Fname" class="Fname form-control" placeholder="Full Name" />
+                                        <textarea name="userFeed" class=" teaxtarea form-control" id="exampleFormControlTextarea1"
+                                            rows="3" placeholder="write your feedback here :)"></textarea>
+                                        <input class="btn submit" type="submit" value="Submit" />
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+                <a href="/update">
+                    <li class="text-start six" id="security">Security</li>
+                </a>
+            </div>
+        </div>
+
+        <div style="max-width: 100%;" class="col col-md-9">
+            <h1 class="text-center">Categories</h1>
+            <div class="container ">
+                <div class="row align-items-start">
+                    <div class="col-sm">
+                        <div class="">
+                            <div id="cardDark" class="card">
+                                <a href="/photo"> <img src="main-page-img/photography.jpg"
+                                        class="card-img-top" alt="..."></a>
+                                <div class="card-body">
+                                    <h5 class="card-title text-center">Photography</h5>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <div class="">
+                            <div id="cardDark" class="card">
+                                <a href="/cini">
+                                <img width="50" src="img/cini2.jpg" class="card-img-top" alt="..."></a>
+                                <div class="card-body">
+                                    <h5 class="card-title text-center">Cinematography</h5>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <div class="">
+                            <div id="cardDark" class="card">
+                                <img src="main-page-img/photography.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title text-center">More</h5>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="row align-items-start">
+                    <div class="col-sm">
+                        <div class="">
+                            <div id="cardDark" class="card">
+                                <img src="main-page-img/photography.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title text-center">More</h5>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <div class="">
+                            <div id="cardDark" class="card">
+                                <img src="main-page-img/photography.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title text-center">More</h5>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <div class="">
+                            <div id="cardDark" class="card">
+                                <img src="main-page-img/photography.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title text-center">More</h5>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row align-items-start">
+                    <div class="col-sm">
+                        <div class="">
+                            <div id="cardDark" class="card">
+                                <img src="main-page-img/photography.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title text-center">More</h5>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <div class="">
+                            <div id="cardDark" class="card">
+                                <img src="main-page-img/photography.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title text-center">More</h5>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <div class="">
+                            <div id="cardDark" class="card">
+                                <img src="main-page-img/photography.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title text-center">More</h5>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <title>App</title>
+</head>
+
+<body id="darkMode" style="transition: 0.5s;">
+    <style>
+        .navbar {
+            background-color: #efecec;
+            /* color: rgb(110, 109, 109); */
+        }
+
+        .searchForm {
+            width: 50% !important;
+            height: 32px;
+            text-align: center;
+            border: none;
+            border-radius: 50px;
+        }
+
+        .searchIconForm {
+            width: 100%;
+            text-align: center;
+        }
+
+        .accountImg {
+            width: 20%;
+        }
+
+        /* MAIN FEED CSS */
+        .contentDiv {}
+
+        .feedBody {
+            width: 80%;
+            background-color: #f0f0f0;
+        }
+
+        .userName {
+            background-color: #e0e0e0;
+        }
+
+        .userProvileBorder {
+            padding-top: 10px;
+        }
+
+        .userProile {
+            width: 82%;
+            height: 52px;
+            border-radius: 50%;
+        }
+
+        .user {
+            text-align: left;
+        }
+
+        .userPad {
+            margin-top: 20px;
+        }
+
+        .postDescription {
+            background-color: #f0f0f0;
+        }
+
+        .description {
+            text-align: left;
+            padding: 20px 40px 20px 40px;
+        }
+
+        .userPost {
+            width: 100%;
+        }
+
+        .postReact {
+            padding: 10px 0px 10px 0px;
+            width: 18%;
+        }
+
+        @media (max-width:600px) {
+            .userProile {
+                width: 35%;
+                height: 52px;
+                border-radius: 50%;
+            }
+
+            .userProvileBorder {
+                text-align: left;
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+
+            .userPad {
+                margin-top: 22px;
+                float: right !important;
+                font-weight: 600;
+                font-size: 20px;
+            }
+
+            .user {
+                text-align: right;
+            }
+
+            .description {
+                text-align: left;
+                padding: 50px 40px 50px 40px !important;
+            }
+
+            .postReact {
+                padding: 10px 0px 10px 0px;
+                width: 30%;
+            }
+
+            .feedBody {
+                width: 100%;
+                background-color: #f0f0f0;
+            }
+        }
+
+        .likeHeart {
+            background-color: #e0e0e0;
+        }
+
+        .contentDiv {
+
+            padding-bottom: 70px;
+        }
+
+        #light {
+            display: none;
+        }
+    </style>
+
+    <nav style="transition: 0.5s;" id="darkNav" class="navbar navbar-expand-lg fixed-top">
+        <a style="margin-right: 6rem;" class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div style="width: 100%;" class="d-flex justify-content-center">
+            <form class="searchIconForm" action="">
+                <input class="searchForm" type="search" placeholder="Search">
+                <i class="fas fa-search" aria-hidden="true"></i>
+            </form>
+        </div>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+            <ul class="navbar-nav" style="text-align: left !important;">
+                <li class="nav-item" style="text-align: left !important;">
+                    <button id="dark" class="btn btn-dark" onclick="dark()">Dark</button>
+                    <button id="light" class="btn btn-light" onclick="light()">Light</button>
+
+                </li>
+                <li class="nav-item dropdown" style="text-align: left !important;">
+                    <a id="navbarDropdown" style="text-align: end;" class="nav-link dropdown-toggle" role="button"
+                        data-toggle="dropdown" href="#" tabindex="-1" aria-disabled="true"><img class="accountImg"
+                            src="img/user-regular.svg" alt=""></a>
+                    <div style="left: -72px !important; transition: 0.2s;" class="dropdown-menu"
+                        aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/uplod">Upload</a>
+                        <a class="dropdown-item" href="/userin">Main</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="/logout">Logout</a>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+    <br>
+    <br>
+    <script>
+        function dark() {
+            document.getElementById("darkMode").style.backgroundColor = "rgb(48, 47, 47)";
+            document.getElementById("darkNav").style.backgroundColor = "rgb(89, 89, 89)";
+            document.getElementById("dark").style.display = "none";
+            document.getElementById("light").style.display = "block";
+        }
+        function light() {
+            document.getElementById("darkMode").style.backgroundColor = "rgb(255, 255, 255)";
+            document.getElementById("darkNav").style.backgroundColor = "#EFECEC";
+            document.getElementById("dark").style.display = "block";
+            document.getElementById("light").style.display = "none";
+        }
+
+
+    </script>
+    <!-- <h1>This is the main home page</h1> -->
+    <div class="">
+        <br>
+        <br>
+        <br>
+
+
+        <% usersWithSecrets.forEach(function(user){ %>
+            <div class="container">
+                <div class="row" style="text-align: center;">
+                    <div class="col-md-2">
+                    </div>
+                    <div class="col-sm contentDiv d-flex justify-content-center">
+                        <div class="feedBody">
+                            <div class="userName">
+                                <div class="nameImage">
+                                    <div class="container">
+                                        <div class="row ">
+                                            <div class="col col-lg-2 userProvileBorder">
+                                                <img class="userProile" src="<%=user.picture%>" alt="">
+                                                <!-- <img class="userProile" src="img/BlackPink-Jisoo.jpg.webp" alt=""> -->
+                                            </div>
+                                            <div class="col-6 userPad">
+                                                <p class="user">
+                                                    <%=user.name%>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="postDescription">
+                                <div class="userDescription">
+                                    <p class="description">
+                                        <%=user.secret%>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="userPost d-flex justify-content-center">
+                                <video width="auto" height="240" controls>
+                                    <source src="<%=user.videoPath%>" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                            <div class="likeHeart">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col">
+                                            <img class="postReact" src="img/heart.svg" alt="">
+                                        </div>
+                                        <div class="col">
+                                            <img class="postReact" src="img/comment.svg" alt="">
+                                        </div>
+                                        <div class="col">
+                                            <img class="postReact" src="img/plane.svg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                    </div>
+                </div>
+            </div>
+            <% }) %>
+
+    </div>
+
+    <!-- <a id="registerButton" class="button button-black" href="/">logout</a>
+    <a id="registerButton" class="button button-black" href="/submit">Submit your text</a> -->
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+        integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

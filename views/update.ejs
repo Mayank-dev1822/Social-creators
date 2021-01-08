@@ -1,0 +1,12 @@
+<%- include("partials/header"); -%>
+
+    <form action="/update" method="POST" enctype="multipart/form-data">
+        <div class="form-group">
+            <h1>Add your profile picture</h1>
+            <input type="file" name="profile" id="fileToUpload">
+        </div>
+        <button type="submit" class="btn btn-dark">update</button>
+    </form>
+    <a id="registerButton" class="button button-black" href="/">logout</a>
+
+    <%- include("partials/footer"); -%>

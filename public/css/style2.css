@@ -1,0 +1,377 @@
+/*navbar*/
+
+.btn {
+  border: 3px solid #d62635;
+  animation: mymove 4s infinite;
+}
+
+@keyframes mymove {
+  50% {
+    border-color: #4fcf70;
+  }
+  50% {
+    border-color: #f1ca2f;
+  }
+  50% {
+    border-color: #a767e5;
+  }
+  50% {
+    border-color: #12bcfe;
+  }
+  50% {
+    border-color: #7336e4;
+  }
+}
+.btn {
+  padding-left: 30px;
+  padding-right: 30px;
+  border-color: #d626a1;
+  border-radius: 15px !important;
+  color: black;
+  width: 120%;
+  font-family: "Ubuntu", sans-serif;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.btn:hover {
+  background-color: white;
+}
+.irriRow{
+  width: 100%;
+  
+}
+/* fisrt section */
+
+.text-end {
+  padding: 15rem 0px 0px 0px;
+  margin: 0px 0px 0px 30px;
+  text-align: center;
+  font-size: 50px;
+  font-weight: bolder;
+  width: 90%;
+  font-weight: 100;
+  font-family: 'Montserrat', sans-serif;
+}
+@media(max-width:600px){
+  .text-end {
+  padding: 0rem 0px 0px 50px !important;
+  margin: 0px 0px 0px 0px !important;
+  text-align: center !important;
+  font-size: 50px;
+  font-weight: bolder;
+font-family: 'Montserrat', sans-serif;
+}
+.newDiv{
+  padding-right: 0px !important;
+  width: 90% !important;
+}
+.irriRow{
+  width: 100%;
+  text-align: center;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+}
+.img-fluid {
+  float: left;
+}
+
+@media (min-wdth: 788px) and (max-width: 958px) {
+  .text-end {
+    padding: 8rem 15px 0px 0px !important;
+    margin: 0px 0px 0px 30px;
+    text-align: center;
+  }
+}
+@media (max-width: 600px) {
+  .text-end {
+    padding: 8rem 0px 0px 142px;
+    margin: 0px 0px 0px 0px !important;
+    text-align: center;
+  }
+}
+
+.first-sec {
+  animation-name: illuAni;
+  animation-duration: 2.5s;
+  position: relative;
+  animation-iteration-count: infinite;
+}
+@keyframes illuAni {
+  0% { transform: translate(0,  0px); } 
+    50%  { transform: translate(0, 35px); } 
+    100%   { transform: translate(0, -0px); } 
+}
+
+/*section section*/
+
+.text-start {
+  font-family: "Ubuntu", sans-serif;
+}
+.Left-paragraph {
+  text-align: center;
+  font-family: "Ubuntu", sans-serif;
+}
+/* .second-sec {
+  float: right;
+} */
+.second-sec {
+  animation-name: illuAni2;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out; 
+  animation-iteration-count: infinite;
+}
+@keyframes illuAni2 {
+    0% { transform: translate(0,  0px); } 
+    50%  { transform: translate(0, 25px); } 
+    100%   { transform: translate(0, -0px); } 
+}
+/* third section */
+.third-head {
+  text-align: center;
+  font-family: "Ubuntu", sans-serif;
+}
+
+/* .card {
+  margin: 50px 0px 0px 0px;
+  border-radius: 25px;
+} */
+.card-img-top {
+  border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+  .mobCard {
+    width: 21rem !important;
+  }
+}
+
+/* div.card {
+  width: 250px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+} */
+
+div.header {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px;
+  font-size: 40px;
+  font-family: "Ubuntu", sans-serif;
+}
+
+div.container {
+  padding: 10px;
+}
+
+/* fouth section */
+
+.bg-4 {
+  background-image: url("../img/bg-2.png");
+}
+.fourth-head {
+  padding: 20px 0px 30px 0px;
+  font-size: 50px;
+  text-align: center;
+  text-decoration: none;
+  font-family: 'Quicksand', sans-serif;
+}
+.text-center {
+  color: #131212;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 25px;
+  text-align: center;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  /* width: 50%; */
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 50px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.button {
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #ffffff;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+/* footer */
+
+
+.footerText {
+  color: white;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 100;
+  font-size: 30px;
+}
+.footerLinks {
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  text-decoration: none;
+}
+.footerGrid {
+  text-align: center;
+}
+.footerLinks {
+  text-align: center;
+}
+.footerAbout {
+  color: white;
+  text-align: justify;
+}
+.socialLinks {
+  text-align: center;
+}
+.footerLinks:hover {
+  color: #e4b535;
+}
+.contactDiv {
+  color: white;
+}
+.footerContact {
+  font-size: 0.8rem;
+  text-align: justify;
+  line-height: 24px;
+}
+.footerContainer {
+  padding: 50px 0px 30px 0px;
+}
+.footerTextMain {
+  color: white;
+  font-weight: 100 !important;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 30px;
+  text-align: center;
+}
+
+.footerTextAbout {
+  color: white;
+  font-family: "Playball", cursive;
+  font-size: 35px;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  /* .carousel-item {
+    height: 4px !important;
+  } */
+  .aboutCompany {
+    text-align: center;
+    font-size: 45px;
+    padding: 20px 0px 30px 0px;
+  }
+ 
+  .cardsDiv {
+    background-image: url("../img/productsBack.jpg");
+    background-repeat: no-repeat;
+    background-size: 350% 100%;
+  } 
+  .footerText {
+    color: white;
+    font-family: 'Quicksand', sans-serif !important;
+    font-size: 35px;
+    text-align: center !important;
+  }
+  .footerGrid {
+    text-align: center !important;
+  }
+  .footerBug {
+    width: 100%;
+  }
+  .footerAbout {
+    text-align: center;
+    padding: 0px 0px 0px 20px;
+  }
+  .footerUl {
+    text-align: center !important;
+    padding: 20px 0px 0px 70px;
+  }
+  .footerHeadContact {
+    padding-top: 30px;
+  }
+  .paraDiv {
+    font-family: "Poppins", sans-serif;
+    padding: 0px 40px 0px 40px;
+  }
+  .navbar-nav {
+    background-color: rgba(168, 99, 246, 0.719);
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 12px;
+  }
+}
+
+/* NEW ADDED CSS */
+.newCenter {
+  text-align: center;
+}
+.aboutText {
+  text-align: center !important;
+font-family: 'Quicksand', sans-serif;
+  font-size: 25px;
+  font-size: 40px;
+  padding: 20px 0px 30px 0px ;
+}
+.readMoreButton{
+  line-height: 0% !important;
+  height: 55px;
+  background-color:#3FC1C9;
+  margin-left:auto;
+  margin-right:auto;
+  display:block;
+  border-radius: 30px;
+}
+.footerDiv {
+  background-color: #384259;
+}
+.readMoreText{
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+}
+.footerRepair{
+  padding-left: 0px !important;  
+}
+.mobCard {
+  width: 18rem !important;
+}
+
+/* NEW SLIDER CSS */

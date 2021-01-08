@@ -1,0 +1,14 @@
+<%- include("partials/header"); -%>
+
+<h1>This is the video upload page</h1>
+
+<form action="/uplod" method="POST" enctype="multipart/form-data">
+    <div class="form-group">
+        <input type="text" class="form-control text-center" name="description" placeholder="Type somthing" id="">
+        <input type="file" name="profile" id="fileToUpload">
+    </div>
+    <button type="submit" class="btn btn-dark">uplod</button>
+</form>
+<a id="registerButton" class="button button-black" href="/">logout</a>
+
+<%- include("partials/footer"); -%>
