@@ -4,7 +4,7 @@
   "description": "initial build",
   "main": "app.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node app.js"
   },
   "author": "Mayank_Khushi",
   "license": "ISC",
