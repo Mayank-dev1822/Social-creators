@@ -87,8 +87,8 @@ passport.use(new GoogleStrategy({
     // callbackURL: "http://localhost:3000/auth/google/devbase",
     clientID: '213220483786-diok775crcc8pjc0fsh5f7iiogni19n5.apps.googleusercontent.com',
     clientSecret: 'gAfMb4TDa-Hqd-7rr3T2d- YQ',
-    callbackURL: "https://tranquil-island-39460.herokuapp.com/auth/google/devbase",
-    userProfileURL: "https://www.googleapis.com/oauth2/v3/userinfo"
+    callbackURL: "http://tranquil-island-39460.herokuapp.com/auth/google/devbase",
+    // userProfileURL: "https://www.googleapis.com/oauth2/v3/userinfo"
 },
     function (accessToken, refreshToken, profile, cb) {
         User.findOrCreate({ googleId: profile.id, name: profile.displayName, username: profile.id, picture: profile._json.picture}, function (err, user) {
