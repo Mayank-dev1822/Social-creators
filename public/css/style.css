@@ -246,7 +246,7 @@ a:hover {
 }
 
 @media (min-width: 601px) {
-  .menu {/* feedback section  */
+  /* feedback section  */
 
 .container-fluid {
   border: 2px solid black;
@@ -505,9 +505,7 @@ a:hover {
   height: 300px;
 }
 
-    display: none;
-  }
-}
+  
 .menu ul {
   height: 0px;
   overflow: hidden;
@@ -519,4 +517,5 @@ a:hover {
 
 .menu:hover ul {
   height: 300px;
+}
 }
