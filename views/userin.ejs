@@ -249,6 +249,276 @@
             background-position: 0% 50%;
         }
     }
+
+    /* feedback section  */
+
+    .container-fluid {
+        border: 2px solid black;
+        border-radius: 10px;
+        box-shadow: 10px 10px 5px grey;
+        height: 300px;
+        width: 600px !important;
+    }
+
+    .row {
+        padding: 0px 0px 15px 0px;
+    }
+
+    h1 {
+        padding: 15px;
+        text-align: center;
+        font-size: 60px;
+        font-family: "Oswald", sans-serif;
+    }
+
+    .button {
+        background-color: #4caf50;
+        border-radius: 10px;
+        color: white;
+        padding: 6px 28px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+    }
+
+    .button-black {
+        background-color: white;
+        color: black;
+        border: 2px solid #555555;
+    }
+
+    .button-black:hover {
+        background-color: #555555;
+        color: white;
+    }
+
+    .oAuth {
+        padding-top: 60px;
+    }
+
+
+    @media only screen and (max-width: 600px) {
+        .container-fluid {
+            padding: 0px 20px 0px 20px;
+            height: 400px;
+            width: auto !important;
+        }
+
+        .mobDiv {
+            margin: 0px 20px 0px 20px;
+        }
+    }
+
+
+    /* navbar */
+    .navbar-brand {
+        margin-left: 15px;
+
+    }
+
+    /* logout modal btns */
+    .button {
+        background-color: #f8f9fa;
+        border: none;
+    }
+
+    .button:hover {
+        background-color: #f8f9fa;
+
+    }
+
+    .btn-block {
+        background-color: darkviolet;
+    }
+
+    /* gutters */
+
+    .no-gutters {
+        margin-right: 0;
+        margin-left: 5px;
+    }
+
+    /* left panel items */
+
+    .text-start {
+        list-style: none;
+        color: black;
+        font-size: 20px;
+        font-weight: bold;
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+    }
+
+    .col-6 {
+        background-color: #eee;
+
+
+    }
+
+    a:hover {
+        text-decoration: none;
+    }
+
+    #feeds {
+        border-left: 6px solid red;
+        padding-left: 2px;
+
+    }
+
+    #friends {
+        border-left: 6px solid rgb(255, 208, 0);
+        padding-left: 2px;
+    }
+
+    #groups {
+        border-left: 6px solid rgb(0, 255, 149);
+        padding-left: 2px;
+    }
+
+    #settings {
+        border-left: 6px solid rgb(0, 255, 242);
+        padding-left: 2px;
+    }
+
+    #feedback {
+        border-left: 6px solid rgb(0, 140, 255);
+        padding-left: 2px;
+        color: black;
+    }
+
+    #security {
+        border-left: 6px solid rgb(221, 0, 255);
+        padding-left: 2px;
+
+    }
+
+    .one {
+        width: 6px;
+        height: 50px;
+        background: red;
+        transition: width 0.3s;
+    }
+
+    .one:hover {
+        width: 300px;
+    }
+
+    .two {
+        width: 6px;
+        height: 50px;
+        background: rgb(255, 208, 0);
+        transition: width 0.3s;
+    }
+
+    .two:hover {
+        width: 300px;
+    }
+
+    .three {
+        width: 6px;
+        height: 50px;
+        background: rgb(0, 255, 149);
+        transition: width 0.3s;
+    }
+
+    .three:hover {
+        width: 300px;
+    }
+
+    .four {
+        width: 6px;
+        height: 50px;
+        background: rgb(0, 255, 242);
+        transition: width 0.3s;
+    }
+
+    .four:hover {
+        width: 300px;
+    }
+
+    .five {
+        width: 8px;
+        height: 50px;
+        background: rgb(0, 140, 255);
+        transition: width 0.3s;
+    }
+
+    .five:hover {
+        width: 300px;
+    }
+
+    .six {
+        width: 6px;
+        height: 50px;
+        background: rgb(221, 0, 255);
+        transition: width 0.3s;
+    }
+
+    .six:hover {
+        width: 300px;
+    }
+
+
+    /* right grids */
+
+    .card {
+        border: none;
+        transition: 0.5s;
+        background-color: #eeeeee00;
+    }
+
+    .card-img-top {
+        border-radius: 20px;
+        box-shadow: 0 14px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    /* NEW CSS */
+
+    .card {
+        width: 85% !important;
+    }
+
+    .marginDiv {
+        margin: 0px 0px 0px 0px;
+    }
+
+    @media (max-width: 600px) {
+        .marginDiv {
+            margin: 10px 0px 0px 0px !important;
+        }
+
+        .card {
+            width: 100% !important;
+        }
+
+        .hideMob {
+            display: none;
+        }
+    }
+
+    @media (min-width: 601px) {
+        .menu {
+            display: none;
+        }
+    }
+
+    .menu ul {
+        height: 0px;
+        overflow: hidden;
+        -webkit-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .menu:hover ul {
+        height: 300px;
+    }
 </style>
 
 <body id="darkMode">
@@ -395,11 +665,8 @@
 
             <h1></h1>
             <div id="turn" class="item">
-                <a href="/submit">
-                    <li class="text-start one" id="uploads">Upload</li>
-                </a>
-                <a href="/profile">
-                    <li class="text-start four" id="settings">feeds</li>
+                <a href="">
+                    <li class="text-start one" id="feeds">Feeds</li>
                 </a>
                 <a href="">
                     <li class="text-start two" id="friends">Friends</li>
@@ -407,39 +674,40 @@
                 <a href="">
                     <li class="text-start three" id="groups">Groups</li>
                 </a>
+                <a href="">
+                    <li class="text-start four" id="settings">Settings</li>
+                </a>
 
 
+                <li class="text-start five" id="groups feedback">
+                    <!--Trigger-->
+                    <a class="feedback-trigger" href="#" data-target="#login" data-toggle="modal"
+                        id="feedback">Feedback</a>
+                    <div id="login" class="modal fade" role="dialog">
+                        <div class="modal-dialog">
 
-                <ul style="padding-left: 0px !important;">
-                    <li class="text-start three" id="groups feedback">
-                        <!--Trigger-->
-                        <a style="color: black !important; padding-left: 9px;" class="feedback-trigger" href="#"
-                            data-target="#login" data-toggle="modal">Feedback</a>
-                        <div id="login" class="modal fade" role="dialog">
-                            <div class="modal-dialog">
-
-                                <div class="modal-content">
-                                    <div class="modal-body">
-                                        <button data-dismiss="modal" class="close">&times;</button>
-                                        <h4>Feedback</h4>
-                                        <form action="/feedback" method="POST">
-                                            <input type="text" name="Fname" class="Fname form-control"
-                                                placeholder="Full Name" />
-                                            <textarea name="userFeed" class=" teaxtarea form-control"
-                                                id="exampleFormControlTextarea1" rows="3"
-                                                placeholder="write your feedback here :)"></textarea>
-                                            <input class="btn submit" type="submit" value="Submit" />
-                                        </form>
-                                    </div>
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <button data-dismiss="modal" class="close">&times;</button>
+                                    <h4>Feedback</h4>
+                                    <form action="/feedback" method="POST">
+                                        <input type="text" name="Fname" class="Fname form-control"
+                                            placeholder="Full Name" />
+                                        <textarea name="userFeed" class=" teaxtarea form-control"
+                                            id="exampleFormControlTextarea1" rows="3"
+                                            placeholder="write your feedback here :)"></textarea>
+                                        <input class="btn submit" type="submit" value="Submit" />
+                                    </form>
                                 </div>
                             </div>
                         </div>
-                    </li>
+                    </div>
+                </li>
 
-                    <a href="/update">
-                        <li class="text-start six" id="security">Security</li>
-                    </a>
-                </ul>
+                <a href="/update">
+                    <li class="text-start six" id="security">Security</li>
+                </a>
+
             </div>
         </div>
 
