@@ -395,11 +395,8 @@
 
             <h1></h1>
             <div id="turn" class="item">
-                <a href="/submit">
-                    <li class="text-start one" id="uploads">Upload</li>
-                </a>
-                <a href="/profile">
-                    <li class="text-start four" id="settings">feeds</li>
+                <a href="">
+                    <li class="text-start one" id="feeds">Feeds</li>
                 </a>
                 <a href="">
                     <li class="text-start two" id="friends">Friends</li>
@@ -407,39 +404,40 @@
                 <a href="">
                     <li class="text-start three" id="groups">Groups</li>
                 </a>
+                <a href="">
+                    <li class="text-start four" id="settings">Settings</li>
+                </a>
 
 
+                <li class="text-start five" id="groups feedback">
+                    <!--Trigger-->
+                    <a class="feedback-trigger" href="#" data-target="#login" data-toggle="modal"
+                        id="feedback">Feedback</a>
+                    <div id="login" class="modal fade" role="dialog">
+                        <div class="modal-dialog">
 
-                <ul style="padding-left: 0px !important;">
-                    <li class="text-start three" id="groups feedback">
-                        <!--Trigger-->
-                        <a style="color: black !important; padding-left: 9px;" class="feedback-trigger" href="#"
-                            data-target="#login" data-toggle="modal">Feedback</a>
-                        <div id="login" class="modal fade" role="dialog">
-                            <div class="modal-dialog">
-
-                                <div class="modal-content">
-                                    <div class="modal-body">
-                                        <button data-dismiss="modal" class="close">&times;</button>
-                                        <h4>Feedback</h4>
-                                        <form action="/feedback" method="POST">
-                                            <input type="text" name="Fname" class="Fname form-control"
-                                                placeholder="Full Name" />
-                                            <textarea name="userFeed" class=" teaxtarea form-control"
-                                                id="exampleFormControlTextarea1" rows="3"
-                                                placeholder="write your feedback here :)"></textarea>
-                                            <input class="btn submit" type="submit" value="Submit" />
-                                        </form>
-                                    </div>
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <button data-dismiss="modal" class="close">&times;</button>
+                                    <h4>Feedback</h4>
+                                    <form action="/feedback" method="POST">
+                                        <input type="text" name="Fname" class="Fname form-control"
+                                            placeholder="Full Name" />
+                                        <textarea name="userFeed" class=" teaxtarea form-control"
+                                            id="exampleFormControlTextarea1" rows="3"
+                                            placeholder="write your feedback here :)"></textarea>
+                                        <input class="btn submit" type="submit" value="Submit" />
+                                    </form>
                                 </div>
                             </div>
                         </div>
-                    </li>
+                    </div>
+                </li>
 
-                    <a href="/update">
-                        <li class="text-start six" id="security">Security</li>
-                    </a>
-                </ul>
+                <a href="/update">
+                    <li class="text-start six" id="security">Security</li>
+                </a>
+
             </div>
         </div>
 
