@@ -56,14 +56,6 @@ h1 {
     }
 
 
-
-
-
-
-
-
-
-
      /* navbar */
  .navbar-brand {
   margin-left: 15px;
@@ -113,7 +105,7 @@ a:hover {
   text-decoration: none;
 }
 
-#uploads {
+#feeds {
   border-left: 6px solid red;
   padding-left: 2px;
 
@@ -134,14 +126,16 @@ a:hover {
   padding-left: 2px;
 }
 
-#privacy {
+#feedback {
   border-left: 6px solid rgb(0, 140, 255);
   padding-left: 2px;
+  color:black;
 }
 
 #security {
   border-left: 6px solid rgb(221, 0, 255);
   padding-left: 2px;
+  
 }
 
 .one {
@@ -189,7 +183,7 @@ a:hover {
 }
 
 .five {
-  width: 6px;
+  width: 8px;
   height: 50px;
   background: rgb(0, 140, 255);
   transition: width 0.3s;
