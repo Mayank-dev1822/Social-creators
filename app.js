@@ -97,9 +97,9 @@ passport.use(new GoogleStrategy({
     }
 ));
 
-fs.readdirSync(testFolder).forEach(file => {
-    // console.log(file);
-});
+// fs.readdirSync(testFolder).forEach(file => {
+//     // console.log(file);
+// }); 
 
 // STORAGE ENGINE
 
