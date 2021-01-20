@@ -643,7 +643,27 @@
             <a href="">
                 <li class="text-start four" id="settings">Settings</li>
             </a>
-
+            <li class="text-start five" id="groups feedback">
+                <!--Trigger-->
+                <a class="feedback-trigger" href="#" data-target="#login" data-toggle="modal" id="feedback">Feedback</a>
+                <div id="login" class="modal fade" role="dialog">
+                    <div class="modal-dialog">
+            
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <button data-dismiss="modal" class="close">&times;</button>
+                                <h4>Feedback</h4>
+                                <form action="/feedback" method="POST">
+                                    <input type="text" name="Fname" class="Fname form-control" placeholder="Full Name" />
+                                    <textarea name="userFeed" class=" teaxtarea form-control" id="exampleFormControlTextarea1"
+                                        rows="3" placeholder="write your feedback here :)"></textarea>
+                                    <input class="btn submit" type="submit" value="Submit" />
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
             <a href="">
                 <li class="text-start six" id="security">Security</li>
             </a>
